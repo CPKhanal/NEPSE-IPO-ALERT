@@ -1,0 +1,14 @@
+name: NEPSE IPO Alert Cron
+
+on:
+  schedule:
+    - cron: '*/10 * * * *'  # every 10 minutes (UTC)
+  workflow_dispatch:        # allows manual run too
+
+jobs:
+  trigger-alert:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Ping IPO Script
+        run: |
+          curl -s --retry 3 --max-time 20 https://ipoalert.42web.io/check-ipo.php?cron=1
