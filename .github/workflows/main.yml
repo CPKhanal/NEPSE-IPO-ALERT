@@ -11,4 +11,5 @@ jobs:
     steps:
       - name: Ping IPO Script
         run: |
-          curl -s --retry 3 --max-time 20 https://ipoalert.42web.io/check-ipo.php?cron=1
+          echo "📡 Triggering NEPSE IPO Alert script..."
+          curl -v -A "Mozilla/5.0" --retry 3 --max-time 20 https://ipoalert.42web.io/check-ipo.php?cron=1
