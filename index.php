@@ -1,3 +1,4 @@
+<?php include 'check-ipo.php'; ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
