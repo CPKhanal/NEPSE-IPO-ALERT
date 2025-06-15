@@ -1,8 +1,6 @@
 name: NEPSE IPO Alert Cron
 
-on:
-  schedule:
-    - cron: '*/10 * * * *'  # every 10 minutes (UTC)
+
   workflow_dispatch:        # allows manual run too
 
 jobs:
